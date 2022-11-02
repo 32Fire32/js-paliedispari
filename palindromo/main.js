@@ -8,26 +8,27 @@
 
 
 const word = prompt("inserisci una parola");
-let word1 = "";
-let word2 = "";
+
 
 function isPalindrome(word){
+    // let word1 = "";
+    let wordReverse = "";
 
     console.log(typeof(word));
 
-    for ( i = 0; i < word.length; i++ ) {
-        word1 = word1 + word[i];
+    // for ( i = 0; i < word.length; i++ ) {
+    //     word1 = word1 + word[i];
         
-      }
-      console.log("la parola inserita è " + word1);
+    //   }
+    //   console.log("la parola inserita è " + word1);
     
     for ( i = word.length - 1; i >= 0; i-- ) {
-        word2 += word[i];
+        wordReverse += word[i];
         
     }
-    console.log("la parola al contrario è " + word2);
+    console.log("la parola al contrario è " + wordReverse);
     
-    if ( word1 === word2) {
+    if ( word === wordReverse) {
         alert("hai inserito una parola palindroma");
     }
 
