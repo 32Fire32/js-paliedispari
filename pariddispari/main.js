@@ -14,13 +14,15 @@ function cpu_number(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-function isEven(sum) {
-    if ( sum % 2 === 0) {
+function isEven(number) {
+    if ( number % 2 === 0) {
         alert("la somma dei due numeri è pari");
+        return true;
     } else {
         alert("la somma dei due numeri è dispari");
+        return false;
     }
-    return sum;
+    // return sum;
 }
 
 // /FUNZIONI //
@@ -67,10 +69,10 @@ let sum = userNumber + cpuNumber;
 console.log ("la somma dei due numeri è " + sum);
 
 // Dichiaro se la somma è pari o dispari
-isEven(sum);
+// isEven(sum);
 
 // Proclamo il vincitore
-if ( sum % 2 === 0 && userChoice === true ) {
+if ( isEven(sum)  && userChoice === true ) {
     alert ("Hai vinto");
 } else {
     alert ("Hai perso");
